@@ -1,0 +1,531 @@
+
+
+<!DOCTYPE html>
+<!--
+	Drake University
+	author: Mahesh Gaya
+	date: May 3,2016
+	desc: CS 178 final project::update.html
+	-->
+<html lang="en"><head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="updatepage.css">
+	<title>Volunteer Opportunities - Drake University</title>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type='text/javascript' src='jquery.autocomplete.js'></script>
+	<link rel="stylesheet" type="text/css" href="jquery.autocomplete.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$('#display_info').elastic();
+	</script>
+</head>
+<body>
+<nav class="navbar navbar-fixed-top navbar-dark bg-primary  ">
+	<a class="navbar-brand" href="index.html">CAB Admin</a>
+	<div class="container-fluid">
+	<ul class="nav navbar-nav">
+		<li class="nav-item">
+			<a class="nav-link" href="index.html">Home</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="insertRecords.html">Add Program</a>
+		</li>
+		<li class="nav-item active">
+			<a class="nav-link" href="update.html">Update Program <span class="sr-only">(current)</span></a>
+		</li>
+	</ul>
+	</div>
+</nav>
+
+<div class="jumbotron">
+	<h1>Update Program Information</h1>
+	<p>Update primary contact, secondary contact, program details, and more</p>
+</div>
+
+<p>Search our database by entering data into the provided fields. If you want to update a field, make sure that the other fields remain unchanged from the original record or else they will be updated, too. If you want to see all records, leave all fields blank.</p>
+<p id='note'> Note: Fields marked with * are required.</p>
+<br></br>
+
+<div class="outerwrap">
+<div class="container">
+	
+	<ul class="nav nav-tabs">
+		<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#primary">Primary Contact</a></li>
+		<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#secondary">Secondary Contact</a></li>
+		<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#program">Program Info</a></li>
+		<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#cab">Other Info</a><li>
+	</ul>
+
+
+	<div class="tab-content">
+	<div id="primary" class="tab-pane fade in active">
+	<form method="get" name="frm_primary_contact" action="./pc_form.php"  role="form" target="_blank">
+		<fieldset>
+			<legend><b>Primary Contact</b></legend>
+
+			<div class="row">
+				<div class="col-md-3">
+					Primary contact ID (pc_id):
+				</div>
+				<div class="col-md-3">
+					<input type="number" min="0" class="form-control" id="pc_id_primary"  placeholder="Enter pc_id" name="pc_id_primary">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					*First Name:
+				</div>
+				<div class="col-md-9">
+					<input type="text" class="form-control" id="firstname_primary"  placeholder="Enter first name" name="firstname_primary">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					Middle Name:
+				</div>
+				<div class="col-md-9">
+					<input type="text" name="middlename_primary" class="form-control" id="middlename_primary" placeholder="Enter middle name">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					*Last Name:	
+				</div>
+				<div class="col-md-9">
+					<input type="text" name="lastname_primary" class="form-control" id="lastname_primary" placeholder="Enter last name">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					*Phone Number: 	
+				</div>
+				<div class="col-md-9">
+					<input type="text" name="phonenum_primary" class="form-control" id="phonenum_primary" placeholder="Enter phone number">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					Email:		
+				</div>
+				<div class="col-md-9">
+					<input type="email" name="email_primary" class="form-control" id="email_primary" placeholder="Enter email address">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					Mailing Address:
+				</div>
+				<div class="col-md-9">
+					<input type="text" name="mailing_address_primary" class="form-control" id="mailing_address_primary" placeholder="Enter mailing address">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					City:
+				</div>
+				<div class="col-md-9">
+					<input type="text" name="city_primary" class="form-control" id="city_primary" placeholder="Enter city">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					State:		
+				</div>
+				<div class="col-md-9">
+					<input type="text" name="state_primary" class="form-control" id="state_primary" placeholder="Enter state">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					Zip Code:	
+				</div>
+				<div class="col-md-3">
+					<input type="number" min="0" max="100000" maxlength="5" name="zip_primary" class="form-control" id="zip_primary" placeholder="Enter zip">
+				</div>
+			</div>
+			<br>
+
+			<hr>
+			<div class="rowbtn">
+				<div class="col-md-4">
+				</div>
+
+				<div class="col-md-2">
+					<button type="submit" value="Search" name="btn_search_primary" id="btn_search_primary" class="btn btn-primary btn-block">Search</button>
+				</div>
+				
+				<div class="col-md-2">
+					<button type="submit" value="Update" name="btn_update_primary" id="btn_update_primary" class="btn btn-primary btn-block" formaction="update_pc.php">Update</button>
+				</div>
+				<div class="col-md-2">
+					<button type="reset" value="Clear form" name="btn_clear_primary" id="btn_clear_primary" class="btn btn-secondary btn-block">Clear Form</button>
+				</div>
+				<div class="col-md-1"></div>
+			
+				<!--
+				<div class="col-md-2">
+					
+					<button type="submit" value="Previous" name="btn_previous_primary" id="btn_previous_primary" class="btn btn-default">Previous</button>
+				
+				</div>
+				<div class="col-md-2">
+					
+					<button type="submit" value="Next" name="btn_next_primary" id="btn_next_primary" class="btn btn-default">Next</button>
+
+				</div>
+				-->
+				<div class="col-md-1"></div>
+			</div>
+		</fieldset>
+		<br>
+		<br>
+		<br>
+		<br>
+	</form>
+	</div>
+
+
+
+
+	<div id="secondary" class="tab-pane fade">
+		<form method="get" name="frm_secondary_contact" action="./sc_form.php" target="_blank">
+		<fieldset>
+			<legend><b>Secondary Contact</b></legend>
+			<div class="row">
+				<div class="col-md-3">
+					Secondary contact ID (sc_id):
+				</div>
+				<div class="col-md-3">
+					<input type="number" min="0" class="form-control" id="sc_id_secondary"  placeholder="Enter sc_id" name="sc_id_secondary">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					Primary contact ID (pc_id):
+				</div>
+				<div class="col-md-3">
+					<input type="number" min="0" class="form-control" id="pc_id_secondary"  placeholder="Enter pc_id" name="pc_id_secondary">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					*First Name:
+				</div>
+				<div class="col-md-9">
+					<input type="text" class="form-control" id="firstname_secondary" placeholder="Enter first name" name="firstname_secondary">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					Middle Name:
+				</div>
+				<div class="col-md-9">
+					<input type="text" name="middlename_secondary" class="form-control" id="middlename_secondary" placeholder="Enter middle name">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					*Last Name:	
+				</div>
+				<div class="col-md-9">
+					<input type="text" name="lastname_secondary" class="form-control" id="lastname_secondary" placeholder="Enter last name">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					*Phone Number: 	
+				</div>
+				<div class="col-md-9">
+					<input type="text" name="phonenum_secondary" class="form-control" id="phonenum_secondary" placeholder="Enter phone number">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					Email:		
+				</div>
+				<div class="col-md-9">
+					<input type="email" name="email_secondary" class="form-control" id="email_secondary" placeholder="Enter email address">
+				</div>
+			</div>
+			<br>
+
+			<hr>
+			<div class="rowbtn">
+				<div class="col-md-4"></div>
+				<div class="col-md-2">
+					<button type="submit" value="Search" name="btn_search_secondary" class="btn btn-primary btn-block">Search</button>
+				</div>
+				<div class="col-md-2">
+					<button type="submit" value="Update" name="btn_update_secondary" class="btn btn-primary btn-block" formaction="update_sc.php">Update</button>
+				</div>
+				<div class="col-md-2">
+					<button type="reset" value="Clear form" name="btn_clear_secondary" class="btn btn-secondary btn-block">Clear Form</button>
+				</div>
+				<div class="col-md-1"></div>
+				<!--
+				<div class="col-md-2">
+					<button type="submit" value="Previous" name="btn_previous_secondary" class="btn btn-default">Previous</button>
+				</div>
+				<div class="col-md-2">
+					<button type="submit" value="Next" name="btn_next_secondary" class="btn btn-default">Next</button>
+				</div>
+			-->
+				<div class="col-md-1"></div>
+			</div>
+		</fieldset>
+		<br>
+		<br>
+		<br>
+		<br>
+		</form>
+	</div>
+
+	<div id="program" class="tab-pane fade">
+		<form method="get" name="frm_program" action="./prog_form.php" target="_blank">
+		<fieldset>
+			<legend><b>Program Infomation</b></legend>
+			<div class="row">
+				<div class="col-md-3">
+					Program ID (prog_id):
+				</div>
+				<div class="col-md-3">
+					<input type="number" min="0" class="form-control" id="prog_id_program"  placeholder="Enter prog_id" name="prog_id_program">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					Relationship: 
+				</div>
+				<div class="col-md-9">
+					<input type="text" name="relationship_program" class="form-control" id="relationship_program" placeholder="Enter relationship">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					Program Name: 
+				</div>
+				<div class="col-md-9">
+					<input type="text" name="name_program" class="form-control" id="name_program" placeholder="Enter program name">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					Issue Area:   
+				</div>
+				<div class="col-md-9">
+					<input type="text" name="issue_area_program" class="form-control" id="issue_area_program" placeholder="Enter issue area">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					Mission Desc:
+				</div>
+				<div class="col-md-9">
+					<textarea name="mission_desc_program" class="form-control" id="mission_desc_program" placeholder="Enter mission description"></textarea>
+				</div>
+			</div>
+			<br>
+
+			<hr>
+			<div class="rowbtn">
+				<div class="col-md-4"></div>
+				<div class="col-md-2">
+					<button type="submit" value="Search" name="btn_search_program" class="btn btn-primary btn-block">Search</button>
+				</div>
+				<div class="col-md-2">
+					<button type="submit" value="Update" name="btn_update_program" class="btn btn-primary btn-block" formaction="update_prog.php">Update</button>
+				</div>
+				<div class="col-md-2">
+					<button type="reset" value="Clear form" name="btn_clear_program" class="btn btn-secondary btn-block">Clear Form</button>
+				</div>
+				<div class="col-md-1"></div>
+				<!--
+				<div class="col-md-2">
+					<button type="submit" value="Previous" name="btn_previous_program" class="btn btn-default">Previous</button>
+				</div>
+				<div class="col-md-2">
+					<button type="submit" value="Next" name="btn_next_program" class="btn btn-default">Next</button>
+				</div>
+			-->
+				<div class="col-md-1"></div>
+			</div>
+		</fieldset>
+		<br>
+		<br>
+		<br>
+		<br>
+		</form>
+	</div>
+
+
+	<div id="cab" class="tab-pane fade">
+		<form method="get" name="frm_cab" action="./cab_form.php" target="_blank">
+		<fieldset>
+			<legend><b>Other Information</b></legend>
+			<div class="row">
+				<div class="col-md-3">
+					CAB ID (cab_id):
+				</div>
+				<div class="col-md-3">
+					<input type="number" min="0" class="form-control" id="cab_id_cab"  placeholder="Enter cab_id" name="cab_id_cab">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					Program ID (prog_id):
+				</div>
+				<div class="col-md-3">
+					<input type="number" min="0" class="form-control" id="prog_id_cab"  placeholder="Enter prog_id" name="prog_id_cab">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					Primary contact ID (pc_id):
+				</div>
+				<div class="col-md-3">
+					<input type="number" min="0" class="form-control" id="pc_id_cab"  placeholder="Enter pc_id" name="pc_id_cab">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					Secondary contact ID (sc_id):
+				</div>
+				<div class="col-md-3">
+					<input type="number" min="0" class="form-control" id="sc_id_cab"  placeholder="Enter sc_id" name="sc_id_cab">
+				</div>
+			</div>
+			<br>
+
+			
+			<div class="row">
+				<div class="col-md-3">
+					Site Visit: 
+				</div>
+				<div class="col-md-9">
+					<input type="text" name="site_visit_cab" class="form-control" id="site_visit_cab" placeholder="Enter site visit date">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					Orientation:
+				</div>
+				<div class="col-md-9">
+					<input type="text" name="orientation_cab" class="form-control" id="orientation_cab" placeholder="Enter orientation date">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					Insurance:  
+				</div>
+				<div class="col-md-9">
+					<input type="text" name="insurance_cab" class="form-control" id="insurance_cab" placeholder="Enter insurance information">
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-3">
+					Notes:
+				</div>
+				<div class="col-md-9">
+					<textarea name="notes_cab" class="form-control" id="notes_cab" placeholder="Enter notes"></textarea>
+				</div>
+			</div>
+			<br>
+
+			<hr>
+			<div class="rowbtn">
+				<div class="col-md-4"></div>
+				<div class="col-md-2">
+					<button type="submit" value="Search" name="btn_search_cab" class="btn btn-primary btn-block">Search</button>
+				</div>
+				<div class="col-md-2">
+					<button type="submit" value="Update" name="btn_update_cab" class="btn btn-primary btn-block" formaction="update_cab.php">Update</button>
+				</div>
+				<div class="col-md-2">
+					<button type="reset" value="Clear form" name="btn_clear_cab" class="btn btn-secondary btn-block">Clear Form</button>
+				</div>
+				<div class="col-md-1"></div>
+				<!--
+				<div class="col-md-2">
+					<button type="submit" value="Previous" name="btn_previous_cab" class="btn btn-default">Previous</button>
+				</div>
+				<div class="col-md-2">
+					<button type="submit" value="Next" name="btn_next_cab" class="btn btn-default">Next</button>
+				</div>
+			-->
+				<div class="col-md-1"></div>
+			</div>
+		</fieldset>
+		<br>
+		<br>
+		<br>
+		<br>
+		</form>
+	</div>
+	</div>
+
+</div>
+</div>
+
+<script>
+	$('.nav-tabs a').on('shown.bs.tab', function(event){
+    	var x = $(event.target).text();         // active tab
+    	var y = $(event.relatedTarget).text();  // previous tab
+	});
+</script>
+
+</body>
+</html>

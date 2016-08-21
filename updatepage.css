@@ -1,0 +1,119 @@
+/*
+* Drake University
+* author: Mahesh Gaya
+* date: May 4, 2016;
+* desc: CS178 final project::updatepage.css
+*	stylesheet for update.html
+* warning: NOT design for mobile display (yet)
+*/
+body{
+	background-color: rgba(152, 175, 199, 0.5);
+	padding: 70px 20px 100px 20px;
+	margin: auto;
+
+}
+
+.outerwrap{
+	display: inline;
+}
+
+
+#note{
+	color: red;
+	line-height: 100%;
+}
+
+div.container{
+	
+	width: 90%;
+
+}
+div{
+	width: 100%;
+
+}
+div#primary{
+	float: left;
+}
+
+div#secondary{
+	float: left;
+}
+
+div#program{
+	float: left;
+}
+
+div#cab{
+	float: left;
+}
+
+pre{
+	display: block;
+	white-space: pre;
+	padding: 5px;
+}
+
+textarea{
+	overflow-y: scroll;
+}
+
+
+input[type="text"]{
+	width: 50%;
+	overflow: scroll;
+	box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+}
+
+
+
+
+/*
+ul {
+	list-style-type: none;
+	margin: 30px 0 0 0;
+	padding: 0 0 0.3em 0;
+}
+
+ul li {
+	display: inline;
+}
+
+ul li a {
+	color: #42454a;
+	background-color: #dedbde; 
+	border: 1px solid #c9c3ba; 
+	border-bottom: none; 
+	padding: 0.3em; 
+	text-decoration: none; 
+}
+
+ul li a:hover { 
+	background-color: #f1f0ee; 
+}
+
+ul li a.selected { 
+	color: #000; 
+	background-color: #f1f0ee; 
+	font-weight: bold; 
+	padding: 0.7em 0.3em 0.38em 0.3em; 
+}
+
+div.tab-content { 
+	border: 1px solid #c9c3ba; 
+	padding: 0.5em; 
+	background-color: #f1f0ee; 
+}
+
+div.tab-content.hide {
+	display: none;
+}
+*/
+
+
+
+
+
+

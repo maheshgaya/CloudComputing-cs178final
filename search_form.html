@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- Author: Alexis Kulash
+Purpose: To provide users with the ability to search program list-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="updatepage.css">
+    <title>Volunteer Opportunities - Drake University</title>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type='text/javascript' src='jquery.autocomplete.js'></script>
+    <link rel="stylesheet" type="text/css" href="jquery.autocomplete.css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <div class="jumbotron">
+    <h1>Volunteer Opportunities</h1>
+    <p>Search below to view a list of our current programs</p>
+  </div>
+
+  <h3>Drake values the opportunity to work with local neighborhoods and community organizations.</h3>
+  <p>Annually, Drake partners with over 100 community agencies and schools on a variety of projects from lunch hour reading programs with kids at King Elementary to building houses with Habitat for Humanity. Whether you are seeking a one-time opportunity to serve a local organization or looking to make an ongoing commitment to an organization or cause you are passionate about, we can connect you. Community partners rely on the goodwill of volunteers to sustain their work. Plenty of opportunities to serve one time, one semester, or even a whole year exist. Many organizations we partner with also offer student volunteers the flexiblity of choosing their own scheduling. Whether you are looking to volunteer as an individual or with a group of friends or colleagues, these opportunities will provide you the chance to give back to the community and fulfill the needs of a local organization. Whatever your interest, there is an opportunity for you to get involved!</p>
+
+  <br></br>
+
+  <h3>Interested in opportunities for a certain major or discipline?</h3>
+  <p>Search through our current program names and descriptions here.</p>
+
+	<form action="search_display.php" method="get">
+	<fieldset>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="input-group">
+	  				<input type="text" class="form-control" name="general"  id="general" placeholder="Search for...">
+			</div>
+	  </div>
+	</div>
+
+	<br>
+
+  <h3>Interested in volunteering to support a certain cause?</h3>
+  <p>Browse our current program issue areas here.</p>
+
+	<div class="row">
+		<div class="col-md-6">
+			<select class="form-control" name="issue" id="issue">
+          			<option></option>
+  			        <option>Advocacy</option>
+                                <option>AmeriCorps</option>
+                                <option>Animals</option>
+                                <option>Arts and Culture</option>
+                                <option>Business</option>
+                                <option>Cultural</option>
+                                <option>Disability</option>
+                                <option>Disaster Relief</option>
+                                <option>Education</option>
+                                <option>Environment</option>
+                                <option>Faith-based</option>
+                                <option>Government</option>
+                                <option>Health</option>
+                                <option>Homeless</option>
+                                <option>Housing</option>
+                                <option>Hunger</option>
+                                <option>Neighborhood</option>
+                                <option>Poverty Reduction</option>
+                                <option>Recreation</option>
+                                <option>Refugee</option>
+                                <option>Seniors</option>
+                                <option>Women</option>
+                                <option>Youth</option>
+			</select>
+		</div>
+	</div>
+
+	<br>
+	<br>
+
+		<div class="col-md-offset-6">
+      <input class="btn btn-primary btn-lg" type="submit" value="Search">
+		</div>
+
+	</fieldset>
+	</form>
+
+<br>
+<br>
+<br>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+<footer>
+<p>Can't find what you're looking for? Email <a href="mailto:drakeservicecab@gmail.com?Subject=Volunteering">drakeservicecab@gmail.com</a> to talk through your interests to find an opportunity that's right for you.</p>
+</footer>
+</html>

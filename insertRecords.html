@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!-- Jenny Steffens -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="updatepage.css">
+    <title>Volunteer Opportunities - Drake University</title>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type='text/javascript' src='jquery.autocomplete.js'></script>
+    <link rel="stylesheet" type="text/css" href="jquery.autocomplete.css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    function validateForm() {
+
+        var name == document.forms["insert_records"]["programname"].value;
+
+        if (x == null || x == "") {
+            alert("Program name must be filled out");
+            return false;
+        }
+    }
+</script>
+</head>
+<body>
+
+  <nav class="navbar navbar-fixed-top navbar-dark bg-primary">
+    <a class="navbar-brand" href="index.html">CAB Admin</a>
+    <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="insertRecords.html">Add Program <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="update.html">Update Program</a>
+      </li>
+    </ul>
+    </div>
+  </nav>
+
+  <div class="jumbotron">
+    <h1>Add New Program</h1>
+    <p>Add details about your organization's program</p>
+  </div>
+
+  <form class="form-horizontal" role="form" action="insertprogram.php" method="post" name="insert_records" onsubmit="return validateForm()">
+
+  <div class="row">
+    <h2>Public Information</h2>
+    <p class="text-muted">This information will be visible to all users</p>
+
+    <br></br>
+
+    <div class="form-group">
+      <label for="programname" class="col-sm-2 control-label">Program Name:</label>
+      <div class="col-sm-10">
+        <input type="text" class = "form-control" name="programname" id="programname" required/>
+      </div>
+    </div>
+
+    <br></br>
+
+    <div class="form-group">
+      <label for="relationship" class="col-sm-2 control-label">Relationship:</label>
+      <div class="col-sm-6">
+        <!-- <input type="text" class="form-control" name="relationship" id="relationship"> -->
+	<select class="form-control" name ="relationship" id = "relationship">
+	<option></option>
+	<option>Partner</option>
+	<option>Connection</option>
+	<option>Outreach</option>
+	<option>Resource</option>
+	<option>Engaged Citizen Corps</option>
+      </select>
+	</div>
+    </div>
+
+    <br></br>
+
+    <div class="form-group">
+      <label for="issuearea" class="col-sm-2 control-label">Issue Area(s):</label>
+      <div class="col-sm-6">
+        <select class="form-control" name="issuearea" id="issuearea">
+          <option></option>
+          <option>Advocacy</option>
+          <option>AmeriCorps</option>
+          <option>Animals</option>
+          <option>Arts and Culture</option>
+          <option>Business</option>
+          <option>Cultural</option>
+          <option>Disability</option>
+          <option>Disaster Relief</option>
+          <option>Education</option>
+          <option>Environment</option>
+          <option>Faith-based</option>
+          <option>Government</option>
+          <option>Health</option>
+          <option>Homeless</option>
+          <option>Housing</option>
+          <option>Hunger</option>
+          <option>Neighborhood</option>
+          <option>Poverty Reduction</option>
+          <option>Recreation</option>
+          <option>Refugee</option>
+          <option>Seniors</option>
+          <option>Women</option>
+          <option>Youth</option>
+        </select>
+      </div>
+    </div>
+
+    <br></br>
+
+    <div class="form-group">
+      <label for="mission_desc" class="col-sm-2 control-label">Description:</label>
+      <div class="col-sm-6">
+        <textarea  class="form-control" name="mission_desc" rows=8 cols=40 id="mission_desc" placeholder="Background information, mission statement, majors wanted, skills wanted, etc." ></textarea>
+      </div>
+    </div>
+  </div>
+
+    <br></br>
+
+  <div class="row">
+    <h2>Private Information</h2>
+    <p class="text-muted">This information will be visible to admins only</p>
+
+    <br></br>
+
+    <div class="form-group">
+      <label for="sitevisit" class="col-sm-2 control-label">Semester of Site Visit:</label>
+      <div class="col-sm-10">
+        <input type="text" name="sitevisit" id="sitevisit" class="form-control" placeholder="(Season) yyyy">
+      </div>
+    </div>
+
+    <br></br>
+
+    <div class="form-group">
+      <label for="orientation" class="col-sm-2 control-label">Orientation Date(s):</label>
+      <div class="col-sm-10">
+        <input type="text" name="orientation" id="orientation" class="form-control">
+      </div>
+    </div>
+
+    <br></br>
+
+    <div class="form-group">
+      <label for="insurance" class="col-sm-2 control-label">Insurance:</label>
+      <div class="col-sm-10">
+        <input type="text" name="insurance" id="insurance" class="form-control" placeholder="Yes - (Indefinitely | Expire mm/dd/yyyy)">
+      </div>
+    </div>
+
+    <br></br>
+
+    <div class="form-group">
+      <label for="notes" class="col-sm-2 control-label">Notes:</label>
+      <div class="col-sm-6">
+        <textarea class="form-control" name="notes" rows=8 cols=40 id="notes" placeholder="Any additional information? These notes will only be visible to admins." ></textarea>
+      </div>
+    </div>
+  </div>
+
+    <br></br>
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-8">
+      <button type="submit" class="btn btn-primary btn-lg">Next</button>
+    </div>
+  </div>
+
+  <br></br>
+
+
+
+  </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>              
